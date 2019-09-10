@@ -1,21 +1,39 @@
-# Lumen PHP Framework
+# Backend Lumen
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+Require : PHP: ">=7.1.3",
+          laravel/lumen-framework: 5.8.*
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+# API URl
 
-## Official Documentation
+## Get User : GET http://localhost/public/user
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+## ADD User : POST http://localhost/public/adduser
+	Content-Type:application/json
+	{
+	    "name": "Name",
+	    "lastname": "Lastname",
+	    "sex": "Sex",
+	    "birthday": "2019-01-01",
+	    "email": "test@test.com",
+	    "address": "99/99",
+	    "telnumber": "0999999999"
+	}
 
-## Security Vulnerabilities
+## Del User : POST http://localhost/public/deluser
+	Content-Type:application/json
+	{
+	    "id": 7
+	}
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## UpdTE USER : POST http://localhost/public/updateuser
+	Content-Type:application/json
+	{
+		"id": "0",
+	    "name": "Name",
+	    "lastname": "Lastname",
+	    "sex": "Sex",
+	    "birthday": "2019-01-01",
+	    "email": "test@test.com",
+	    "address": "99/99",
+	    "telnumber": "0999999999"
+	}
